@@ -55,10 +55,8 @@ public extension NSLayoutConstraint {
     }
 }
 
-protocol SubviewContaining { }
-extension UIView: SubviewContaining { }
-
-extension SubviewContaining where Self == UIView {
+public protocol SubviewContaining { }
+public extension SubviewContaining where Self : UIView {
     
     /// Добавляет новое представление в иерархию и активирует констрейнты.
     /// Для текущего представления и представления, которое будет добавлено свойство
@@ -80,7 +78,7 @@ extension SubviewContaining where Self == UIView {
     ///     newView.topAnchor.constraint(equalTo: superview.topAnchor)
     /// }
     /// ```
-    func addSubview<View: UIView>(_ view: View, @ConstraintBuilder constraints: (Self, View) -> [NSLayoutConstraint]) {
+    func addSubview<T: UIView>(_ view: T, @ConstraintBuilder constraints: (Self, T) -> [NSLayoutConstraint]) {
         // Автоматический отключаем для текущего и добавляемого представления
         self.translatesAutoresizingMaskIntoConstraints = false
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -91,19 +89,21 @@ extension SubviewContaining where Self == UIView {
     }
 }
 
-//final class ConstraintBuilderExample {
-//    func makeConstraints() {
-//        let view = UIView()
-//        let view2 = UILabel()
-//        
-//        view.addSubview(view2) { superview, newView in
-//            if newView.numberOfLines == 0 {
-//                newView.heightAnchor.constraint(equalTo: superview.heightAnchor, multiplier: 0.5)
-//            }
-//            newView.topAnchor.constraint(equalTo: superview.topAnchor)
-//        }
-//        view.addSubview(view2) { superview, newView in
-//            
-//        }
-//    }
-//}
+extension UIView: SubviewContaining { }
+
+final class ConstraintBuilderExample {
+    func makeConstraints() {
+        let view = UIView()
+        let view2 = UILabel()
+        
+        view.addSubview(view2) { superview, newView in
+            if newView.numberOfLines == 0 {
+                newView.heightAnchor.constraint(equalTo: superview.heightAnchor, multiplier: 0.5)
+            }
+            newView.topAnchor.constraint(equalTo: superview.topAnchor)
+        }
+        view.addSubview(view2) { superview, newView in
+            
+        }
+    }
+}
