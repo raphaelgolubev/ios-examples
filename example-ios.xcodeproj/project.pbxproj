@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		81DEB9872D305D05006BFDB6 /* Wave in Frameworks */ = {isa = PBXBuildFile; productRef = 81DEB9862D305D05006BFDB6 /* Wave */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		81C70B1A2D2C6F6900900C7D /* example-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81DEB9872D305D05006BFDB6 /* Wave in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = "example-ios";
 			packageProductDependencies = (
+				81DEB9862D305D05006BFDB6 /* Wave */,
 			);
 			productName = "example-ios";
 			productReference = 81C70B1A2D2C6F6900900C7D /* example-ios.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = 81C70B112D2C6F6900900C7D;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				81DEB9852D305D05006BFDB6 /* XCRemoteSwiftPackageReference "Wave" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 81C70B1B2D2C6F6900900C7D /* Products */;
 			projectDirPath = "";
@@ -258,8 +267,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTLLINKER_FLAGS = "";
+				MTL_COMPILER_FLAGS = "";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				MTL_LANGUAGE_REVISION = UseDeploymentTarget;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -315,8 +327,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTLLINKER_FLAGS = "";
+				MTL_COMPILER_FLAGS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				MTL_LANGUAGE_REVISION = UseDeploymentTarget;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
@@ -345,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		81DEB9852D305D05006BFDB6 /* XCRemoteSwiftPackageReference "Wave" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jtrivedi/Wave";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		81DEB9862D305D05006BFDB6 /* Wave */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81DEB9852D305D05006BFDB6 /* XCRemoteSwiftPackageReference "Wave" */;
+			productName = Wave;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 81C70B122D2C6F6900900C7D /* Project object */;
 }
