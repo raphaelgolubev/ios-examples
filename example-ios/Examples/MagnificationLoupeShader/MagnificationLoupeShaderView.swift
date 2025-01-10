@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MagnificationLoupeShaderView.swift
 //  example-ios
 //
 //  Created by Рафаэль Голубев on 09.01.2025.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Wave
 
-struct LopeContentView: View {
+struct MagnificationLoupeShaderView: View {
 
     static let loupeRestingPosition = CGPoint(x: 0.15, y: 0.85)
 
@@ -143,5 +143,5 @@ struct LopeContentView: View {
 }
 
 #Preview {
-    LopeContentView()
+    MagnificationLoupeShaderView()
 }

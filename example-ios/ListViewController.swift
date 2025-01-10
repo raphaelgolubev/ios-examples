@@ -142,13 +142,13 @@ struct ListSection: Hashable {
     
     static let metal = ListSection(name: "Metal", secondaryName: "Шейдеры", items: [
         ListItem(name: "Лупа", icon: UIImage(systemName: "magnifyingglass"), viewController:
-                    UIHostingController(rootView: LopeContentView())
+                    UIHostingController(rootView: MagnificationLoupeShaderView())
         ),
         ListItem(name: "CD диск", icon: UIImage(systemName: "opticaldisc.fill"), viewController:
-                    UIHostingController(rootView: CDView())
+                    UIHostingController(rootView: CDShaderView())
         ),
         ListItem(name: "Mega Shader", icon: UIImage(systemName: "wave"), viewController:
-                    UIHostingController(rootView: GradientView())
+                    UIHostingController(rootView: GradientShaderView())
         ),
     ])
 }

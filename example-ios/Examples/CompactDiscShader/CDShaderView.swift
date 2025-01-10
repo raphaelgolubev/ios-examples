@@ -1,5 +1,5 @@
 //
-//  CDContentView.swift
+//  CDShaderView.swift
 //  example-ios
 //
 //  Created by Рафаэль Голубев on 09.01.2025.
@@ -87,7 +87,7 @@ struct LetterWidthSize: View {
     }
 }
 
-struct CDView: View {
+struct CDShaderView: View {
     let size: CGFloat = 350.0
     @StateObject private var manager = MotionManager()
     @State private var p: CGFloat = 0.42
@@ -217,6 +217,6 @@ struct CDView: View {
 }
 
 #Preview {
-    CDView()
+    CDShaderView()
 }
 
