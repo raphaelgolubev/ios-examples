@@ -132,8 +132,7 @@ struct ListSection: Hashable {
     let items: [ListItem]
     
     static let uikit = ListSection(name: "UIKit", secondaryName: "Пользовательский интерфейс", items: [
-        ListItem(name: "Placeholder", icon: UIImage(systemName: "circle"), viewController: nil),
-        ListItem(name: "Placeholder 2", icon: UIImage(systemName: "circle"), viewController: nil),
+        ListItem(name: "Drawing View", icon: UIImage(systemName: "pencil"), viewController: DrawingViewController()),
     ])
 
     static let networking = ListSection(name: "Networking", secondaryName: "Работа с сетью", items: [
